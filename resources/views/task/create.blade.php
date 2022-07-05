@@ -10,12 +10,12 @@
        @csrf
 
         <label>Name</label></br>
-        <input type="text" required name="name"  class="form-control col-lg-3"></br>
+        <input type="text" required name="name"  class="form-control col-lg-3">
 
         <div class = "row">
            <div class = "col-lg-4">
-                <label for = "programmer">Programmer</label>
-                    <select name = "programmer" class = "form-control"  multiple required>
+                <label class = "label3" for = "programmer">Programmer</label>
+                    <select name = "programmer" class = "form-control label3"  multiple required>
                     
                             @foreach($programmer as $pro)
                                     <option value="{{ $pro->id }}">{{ $pro->name }}</option>

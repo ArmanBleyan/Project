@@ -15,8 +15,8 @@
         <label>Name</label></br>
         <input type="text" required name="name" value="{{$tasks->name}}" class="form-control col-lg-3"></br>
 
-        <label for = "programmer">Կատեգորիա</label><br><br>
-                <select name = "programmer" class = "form-control col-lg-4 label"><br>
+        <label for = "programmer">Programmer</label><br><br>
+                <select name = "programmer" class = "form-control col-lg-4"><br>
 
                     @foreach($all_programmers as $programmer)
                     <option value="{{ $programmer->id }}" {{ $programmer->status ? "selected" : "" }}>{{ $programmer->name }}</option>
@@ -27,9 +27,9 @@
 
         <div class="col-lg-3">
 
-        <label>Status</label>
+        <label class = "label3">Status</label>
 
-        <select name="status"  class = "form-control col-lg-12">
+        <select name="status"  class = "form-control label3">
 
         <option value="created" {{$tasks->status === "created" ? 'selected': ""}}>created</option>
         <option value="assigned" {{$tasks->status === "assigned" ? 'selected': ""}}>assigned</option>
@@ -41,11 +41,11 @@
 
         </div>
 
-        <br>
+        <br> <br> <br> <br> <br>
 
         <label>Description</label></br>
         <textarea required name="description" class="form-control">{{$tasks->description}}</textarea>
-        </br>
+        </br><br>
 
         <input type="submit" value="Update" class="btn btn-success"></br></br>
     </form>

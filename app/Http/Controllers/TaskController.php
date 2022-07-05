@@ -100,19 +100,18 @@ class TaskController extends Controller
 
             $auth_id = Auth::id();
 
-            if($programmer_id == $auth_id){
+            if($manager_id == $auth_id){
 
-                $task->status = $request->input('status');
-
-            }else if($manager_id === $auth_id){
-       
                 $task->name = $request->input('name');
                 $task->programmer = $request->input('programmer');
                 $task->status = $request->input('status');
                 $task->description = $request->input('description');
 
-            }
+            }else if($programmer_id == $auth_id){
 
+                $task->status = $request->input('status');
+
+            }
 
             $task->save();
             return redirect('/admin');    

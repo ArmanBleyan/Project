@@ -70,7 +70,7 @@
 
                             </div>
 
-                            <label for="test" class="col-lg-7 col-form-label text-md-right checkbox">{{ __('Մուտք է գործում որպես ծրագրավորող') }}</label>
+                            <label for="test" class="col-lg-5 col-form-label text-md-right checkbox">{{ __('Log in as a programmer') }}</label>
 
                         </div>
 
